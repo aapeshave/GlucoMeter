@@ -10,6 +10,8 @@
 
 @interface MyProfileTableViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *lbl_ageValue;
+
 @end
 
 @implementation MyProfileTableViewController
@@ -32,7 +34,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSLog(@"Permission Granted");
                 // Update the user interface based on the current user's health information.
-                //[self updateUsersAgeLabel];
+                [self updateLabelAge];
                 //[self updateUsersHeightLabel];
                 //[self updateUsersWeightLabel];
             });
@@ -52,8 +54,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
 
+#pragma mark - Table view data source
+/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
     return 0;
@@ -63,7 +66,7 @@
 #warning Incomplete implementation, return the number of rows
     return 0;
 }
-
+*/
 #pragma mark - HealthKit Setup
 
 -(void)setUpHealthStoreObject {
@@ -78,10 +81,11 @@
                 
                 return;
             }
-            
+            [self updateLabelAge];
             dispatch_async(dispatch_get_main_queue(), ^{
                 // Update the user interface based on the current user's health information.
-                //[self updateUsersAgeLabel];
+                NSLog(@"Calling Update Age Method");
+                [self updateLabelAge];
                 //[self updateUsersHeightLabel];
                 //[self updateUsersWeightLabel];
             });
@@ -98,6 +102,7 @@
     HKQuantityType *heightType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeight];
     HKQuantityType *weightType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBodyMass];
     HKQuantityType *glucoseType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodGlucose];
+    //HKCharacteristicType *bloodType = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierBloodType];
     return [NSSet setWithObjects:dietaryCalorieEnergyType, activeEnergyBurnType, heightType, weightType, glucoseType, nil];
 }
 
@@ -109,8 +114,37 @@
     HKQuantityType *weightType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBodyMass];
     HKCharacteristicType *birthdayType = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierDateOfBirth];
     HKCharacteristicType *biologicalSexType = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierBiologicalSex];
+    //HKCharacteristicType *bloodType = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierBloodType];
     HKQuantityType *glucoseType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodGlucose];
-    return [NSSet setWithObjects:dietaryCalorieEnergyType, activeEnergyBurnType, heightType, weightType, birthdayType, biologicalSexType,glucoseType, nil];
+    return [NSSet setWithObjects:dietaryCalorieEnergyType, activeEnergyBurnType, heightType, weightType, birthdayType, biologicalSexType,glucoseType,nil];
+}
+
+# pragma mark - Receiving Health Data
+
+-(void)updateLabelAge{
+    NSError *error;
+    NSDate *dateOfBirth = [self.healthStore dateOfBirthWithError:&error];
+    HKBloodTypeObject *bloodType = [self.healthStore bloodTypeWithError:&error];
+    NSLog(@"%@",[bloodType description]);
+    
+    if (!dateOfBirth) {
+        NSLog(@"Either an error occured fetching the user's age information or none has been stored yet. In your app, try to handle this gracefully.");
+        
+        self.lbl_ageValue.text = NSLocalizedString(@"Not available", nil);
+        NSLog(@"Error in retrieving birthdate");
+    }
+    else {
+        // Compute the age of the user.
+        NSDate *now = [NSDate date];
+        
+        NSDateComponents *ageComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitYear fromDate:dateOfBirth toDate:now options:NSCalendarWrapComponents];
+        
+        NSUInteger usersAge = [ageComponents year];
+        
+        NSString *ageValue = [NSNumberFormatter localizedStringFromNumber:@(usersAge) numberStyle:NSNumberFormatterNoStyle];
+        NSString *ageUnit = @" Years";
+        self.lbl_ageValue.text = [ageValue stringByAppendingString:ageUnit];
+    }
 }
 
 /*
