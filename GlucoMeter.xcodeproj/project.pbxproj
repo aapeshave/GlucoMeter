@@ -1,0 +1,574 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		170CF41D1CA724D100BC8611 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 170CF41C1CA724D100BC8611 /* main.m */; };
+		170CF4201CA724D100BC8611 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 170CF41F1CA724D100BC8611 /* AppDelegate.m */; };
+		170CF4291CA724D100BC8611 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170CF4271CA724D100BC8611 /* Main.storyboard */; };
+		170CF42B1CA724D100BC8611 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 170CF42A1CA724D100BC8611 /* Assets.xcassets */; };
+		170CF42E1CA724D100BC8611 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170CF42C1CA724D100BC8611 /* LaunchScreen.storyboard */; };
+		170CF4391CA724D100BC8611 /* GlucoMeterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 170CF4381CA724D100BC8611 /* GlucoMeterTests.m */; };
+		170CF4441CA724D100BC8611 /* GlucoMeterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 170CF4431CA724D100BC8611 /* GlucoMeterUITests.m */; };
+		170CF4521CA724F500BC8611 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170CF4511CA724F500BC8611 /* HealthKit.framework */; };
+		170CF4561CA7267500BC8611 /* HealthKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 170CF4551CA7267500BC8611 /* HealthKitManager.m */; };
+		17D795941CB20380004B2948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17D795931CB20380004B2948 /* Images.xcassets */; };
+		17D795961CB20886004B2948 /* My Profile in Resources */ = {isa = PBXBuildFile; fileRef = 17D795951CB20886004B2948 /* My Profile */; };
+		17D7959F1CB20971004B2948 /* MyProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D7959E1CB20971004B2948 /* MyProfileTableViewController.m */; };
+		17D795A11CB20A0F004B2948 /* My Records in Resources */ = {isa = PBXBuildFile; fileRef = 17D795A01CB20A0F004B2948 /* My Records */; };
+		17D795A31CB20A2B004B2948 /* My Remarks in Resources */ = {isa = PBXBuildFile; fileRef = 17D795A21CB20A2B004B2948 /* My Remarks */; };
+		17D795A61CB20A44004B2948 /* MyRecordsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D795A51CB20A44004B2948 /* MyRecordsTableViewController.m */; };
+		17D795A91CB20A64004B2948 /* MyRemarksTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D795A81CB20A64004B2948 /* MyRemarksTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		170CF4351CA724D100BC8611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 170CF4101CA724D100BC8611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 170CF4171CA724D100BC8611;
+			remoteInfo = GlucoMeter;
+		};
+		170CF4401CA724D100BC8611 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 170CF4101CA724D100BC8611 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 170CF4171CA724D100BC8611;
+			remoteInfo = GlucoMeter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		170CF4181CA724D100BC8611 /* GlucoMeter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GlucoMeter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		170CF41C1CA724D100BC8611 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		170CF41E1CA724D100BC8611 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		170CF41F1CA724D100BC8611 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		170CF4281CA724D100BC8611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		170CF42A1CA724D100BC8611 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		170CF42D1CA724D100BC8611 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		170CF42F1CA724D100BC8611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170CF4341CA724D100BC8611 /* GlucoMeterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlucoMeterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		170CF4381CA724D100BC8611 /* GlucoMeterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlucoMeterTests.m; sourceTree = "<group>"; };
+		170CF43A1CA724D100BC8611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170CF43F1CA724D100BC8611 /* GlucoMeterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GlucoMeterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		170CF4431CA724D100BC8611 /* GlucoMeterUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlucoMeterUITests.m; sourceTree = "<group>"; };
+		170CF4451CA724D100BC8611 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		170CF4511CA724F500BC8611 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		170CF4531CA724F500BC8611 /* GlucoMeter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GlucoMeter.entitlements; sourceTree = "<group>"; };
+		170CF4541CA7267500BC8611 /* HealthKitManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HealthKitManager.h; sourceTree = "<group>"; };
+		170CF4551CA7267500BC8611 /* HealthKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitManager.m; sourceTree = "<group>"; };
+		17D795931CB20380004B2948 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GlucoMeter/Images.xcassets; sourceTree = "<group>"; };
+		17D795951CB20886004B2948 /* My Profile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "My Profile"; sourceTree = "<group>"; };
+		17D7959D1CB20971004B2948 /* MyProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyProfileTableViewController.h; path = "My Profile/MyProfileTableViewController.h"; sourceTree = "<group>"; };
+		17D7959E1CB20971004B2948 /* MyProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyProfileTableViewController.m; path = "My Profile/MyProfileTableViewController.m"; sourceTree = "<group>"; };
+		17D795A01CB20A0F004B2948 /* My Records */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "My Records"; sourceTree = "<group>"; };
+		17D795A21CB20A2B004B2948 /* My Remarks */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "My Remarks"; sourceTree = "<group>"; };
+		17D795A41CB20A44004B2948 /* MyRecordsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyRecordsTableViewController.h; path = "My Records/MyRecordsTableViewController.h"; sourceTree = "<group>"; };
+		17D795A51CB20A44004B2948 /* MyRecordsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyRecordsTableViewController.m; path = "My Records/MyRecordsTableViewController.m"; sourceTree = "<group>"; };
+		17D795A71CB20A64004B2948 /* MyRemarksTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyRemarksTableViewController.h; path = "My Remarks/MyRemarksTableViewController.h"; sourceTree = "<group>"; };
+		17D795A81CB20A64004B2948 /* MyRemarksTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyRemarksTableViewController.m; path = "My Remarks/MyRemarksTableViewController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		170CF4151CA724D100BC8611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170CF4521CA724F500BC8611 /* HealthKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170CF4311CA724D100BC8611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170CF43C1CA724D100BC8611 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		170CF40F1CA724D100BC8611 = {
+			isa = PBXGroup;
+			children = (
+				17D795931CB20380004B2948 /* Images.xcassets */,
+				170CF4511CA724F500BC8611 /* HealthKit.framework */,
+				170CF41A1CA724D100BC8611 /* GlucoMeter */,
+				170CF4371CA724D100BC8611 /* GlucoMeterTests */,
+				170CF4421CA724D100BC8611 /* GlucoMeterUITests */,
+				170CF4191CA724D100BC8611 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		170CF4191CA724D100BC8611 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				170CF4181CA724D100BC8611 /* GlucoMeter.app */,
+				170CF4341CA724D100BC8611 /* GlucoMeterTests.xctest */,
+				170CF43F1CA724D100BC8611 /* GlucoMeterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		170CF41A1CA724D100BC8611 /* GlucoMeter */ = {
+			isa = PBXGroup;
+			children = (
+				17D795A21CB20A2B004B2948 /* My Remarks */,
+				17D795A01CB20A0F004B2948 /* My Records */,
+				17D795951CB20886004B2948 /* My Profile */,
+				170CF4531CA724F500BC8611 /* GlucoMeter.entitlements */,
+				170CF41E1CA724D100BC8611 /* AppDelegate.h */,
+				170CF41F1CA724D100BC8611 /* AppDelegate.m */,
+				170CF4271CA724D100BC8611 /* Main.storyboard */,
+				170CF4541CA7267500BC8611 /* HealthKitManager.h */,
+				170CF4551CA7267500BC8611 /* HealthKitManager.m */,
+				170CF42A1CA724D100BC8611 /* Assets.xcassets */,
+				170CF42C1CA724D100BC8611 /* LaunchScreen.storyboard */,
+				170CF42F1CA724D100BC8611 /* Info.plist */,
+				170CF41B1CA724D100BC8611 /* Supporting Files */,
+				17D7959D1CB20971004B2948 /* MyProfileTableViewController.h */,
+				17D795A71CB20A64004B2948 /* MyRemarksTableViewController.h */,
+				17D795A81CB20A64004B2948 /* MyRemarksTableViewController.m */,
+				17D7959E1CB20971004B2948 /* MyProfileTableViewController.m */,
+				17D795A41CB20A44004B2948 /* MyRecordsTableViewController.h */,
+				17D795A51CB20A44004B2948 /* MyRecordsTableViewController.m */,
+			);
+			path = GlucoMeter;
+			sourceTree = "<group>";
+		};
+		170CF41B1CA724D100BC8611 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				170CF41C1CA724D100BC8611 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		170CF4371CA724D100BC8611 /* GlucoMeterTests */ = {
+			isa = PBXGroup;
+			children = (
+				170CF4381CA724D100BC8611 /* GlucoMeterTests.m */,
+				170CF43A1CA724D100BC8611 /* Info.plist */,
+			);
+			path = GlucoMeterTests;
+			sourceTree = "<group>";
+		};
+		170CF4421CA724D100BC8611 /* GlucoMeterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				170CF4431CA724D100BC8611 /* GlucoMeterUITests.m */,
+				170CF4451CA724D100BC8611 /* Info.plist */,
+			);
+			path = GlucoMeterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		170CF4171CA724D100BC8611 /* GlucoMeter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 170CF4481CA724D100BC8611 /* Build configuration list for PBXNativeTarget "GlucoMeter" */;
+			buildPhases = (
+				170CF4141CA724D100BC8611 /* Sources */,
+				170CF4151CA724D100BC8611 /* Frameworks */,
+				170CF4161CA724D100BC8611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GlucoMeter;
+			productName = GlucoMeter;
+			productReference = 170CF4181CA724D100BC8611 /* GlucoMeter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		170CF4331CA724D100BC8611 /* GlucoMeterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 170CF44B1CA724D100BC8611 /* Build configuration list for PBXNativeTarget "GlucoMeterTests" */;
+			buildPhases = (
+				170CF4301CA724D100BC8611 /* Sources */,
+				170CF4311CA724D100BC8611 /* Frameworks */,
+				170CF4321CA724D100BC8611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				170CF4361CA724D100BC8611 /* PBXTargetDependency */,
+			);
+			name = GlucoMeterTests;
+			productName = GlucoMeterTests;
+			productReference = 170CF4341CA724D100BC8611 /* GlucoMeterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		170CF43E1CA724D100BC8611 /* GlucoMeterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 170CF44E1CA724D100BC8611 /* Build configuration list for PBXNativeTarget "GlucoMeterUITests" */;
+			buildPhases = (
+				170CF43B1CA724D100BC8611 /* Sources */,
+				170CF43C1CA724D100BC8611 /* Frameworks */,
+				170CF43D1CA724D100BC8611 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				170CF4411CA724D100BC8611 /* PBXTargetDependency */,
+			);
+			name = GlucoMeterUITests;
+			productName = GlucoMeterUITests;
+			productReference = 170CF43F1CA724D100BC8611 /* GlucoMeterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		170CF4101CA724D100BC8611 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Ajinkya Peshave";
+				TargetAttributes = {
+					170CF4171CA724D100BC8611 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 3EHXGR24B7;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+					170CF4331CA724D100BC8611 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 3EHXGR24B7;
+						TestTargetID = 170CF4171CA724D100BC8611;
+					};
+					170CF43E1CA724D100BC8611 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 3EHXGR24B7;
+						TestTargetID = 170CF4171CA724D100BC8611;
+					};
+				};
+			};
+			buildConfigurationList = 170CF4131CA724D100BC8611 /* Build configuration list for PBXProject "GlucoMeter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 170CF40F1CA724D100BC8611;
+			productRefGroup = 170CF4191CA724D100BC8611 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				170CF4171CA724D100BC8611 /* GlucoMeter */,
+				170CF4331CA724D100BC8611 /* GlucoMeterTests */,
+				170CF43E1CA724D100BC8611 /* GlucoMeterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		170CF4161CA724D100BC8611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170CF42E1CA724D100BC8611 /* LaunchScreen.storyboard in Resources */,
+				17D795941CB20380004B2948 /* Images.xcassets in Resources */,
+				17D795961CB20886004B2948 /* My Profile in Resources */,
+				170CF42B1CA724D100BC8611 /* Assets.xcassets in Resources */,
+				17D795A11CB20A0F004B2948 /* My Records in Resources */,
+				170CF4291CA724D100BC8611 /* Main.storyboard in Resources */,
+				17D795A31CB20A2B004B2948 /* My Remarks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170CF4321CA724D100BC8611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170CF43D1CA724D100BC8611 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		170CF4141CA724D100BC8611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170CF4561CA7267500BC8611 /* HealthKitManager.m in Sources */,
+				170CF4201CA724D100BC8611 /* AppDelegate.m in Sources */,
+				170CF41D1CA724D100BC8611 /* main.m in Sources */,
+				17D795A91CB20A64004B2948 /* MyRemarksTableViewController.m in Sources */,
+				17D795A61CB20A44004B2948 /* MyRecordsTableViewController.m in Sources */,
+				17D7959F1CB20971004B2948 /* MyProfileTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170CF4301CA724D100BC8611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170CF4391CA724D100BC8611 /* GlucoMeterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		170CF43B1CA724D100BC8611 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				170CF4441CA724D100BC8611 /* GlucoMeterUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		170CF4361CA724D100BC8611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 170CF4171CA724D100BC8611 /* GlucoMeter */;
+			targetProxy = 170CF4351CA724D100BC8611 /* PBXContainerItemProxy */;
+		};
+		170CF4411CA724D100BC8611 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 170CF4171CA724D100BC8611 /* GlucoMeter */;
+			targetProxy = 170CF4401CA724D100BC8611 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		170CF4271CA724D100BC8611 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				170CF4281CA724D100BC8611 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		170CF42C1CA724D100BC8611 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				170CF42D1CA724D100BC8611 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		170CF4461CA724D100BC8611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		170CF4471CA724D100BC8611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		170CF4491CA724D100BC8611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GlucoMeter/GlucoMeter.entitlements;
+				INFOPLIST_FILE = GlucoMeter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ajinkya.GlucoMeter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		170CF44A1CA724D100BC8611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GlucoMeter/GlucoMeter.entitlements;
+				INFOPLIST_FILE = GlucoMeter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ajinkya.GlucoMeter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		170CF44C1CA724D100BC8611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GlucoMeterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ajinkya.GlucoMeterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlucoMeter.app/GlucoMeter";
+			};
+			name = Debug;
+		};
+		170CF44D1CA724D100BC8611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GlucoMeterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ajinkya.GlucoMeterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GlucoMeter.app/GlucoMeter";
+			};
+			name = Release;
+		};
+		170CF44F1CA724D100BC8611 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GlucoMeterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ajinkya.GlucoMeterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GlucoMeter;
+			};
+			name = Debug;
+		};
+		170CF4501CA724D100BC8611 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = GlucoMeterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Ajinkya.GlucoMeterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = GlucoMeter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		170CF4131CA724D100BC8611 /* Build configuration list for PBXProject "GlucoMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170CF4461CA724D100BC8611 /* Debug */,
+				170CF4471CA724D100BC8611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		170CF4481CA724D100BC8611 /* Build configuration list for PBXNativeTarget "GlucoMeter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170CF4491CA724D100BC8611 /* Debug */,
+				170CF44A1CA724D100BC8611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		170CF44B1CA724D100BC8611 /* Build configuration list for PBXNativeTarget "GlucoMeterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170CF44C1CA724D100BC8611 /* Debug */,
+				170CF44D1CA724D100BC8611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		170CF44E1CA724D100BC8611 /* Build configuration list for PBXNativeTarget "GlucoMeterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				170CF44F1CA724D100BC8611 /* Debug */,
+				170CF4501CA724D100BC8611 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 170CF4101CA724D100BC8611 /* Project object */;
+}
