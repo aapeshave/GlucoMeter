@@ -11,6 +11,7 @@
 @interface MyProfileTableViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *lbl_ageValue;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_bloodType;
 
 @end
 
@@ -35,6 +36,7 @@
                 NSLog(@"Permission Granted");
                 // Update the user interface based on the current user's health information.
                 [self updateLabelAge];
+                [self updateBloodTypeLabel];
                 //[self updateUsersHeightLabel];
                 //[self updateUsersWeightLabel];
             });
@@ -114,9 +116,11 @@
     HKQuantityType *weightType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBodyMass];
     HKCharacteristicType *birthdayType = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierDateOfBirth];
     HKCharacteristicType *biologicalSexType = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierBiologicalSex];
+    HKCharacteristicType *bloodType = [HKCharacteristicType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierBloodType];
+    
     //HKCharacteristicType *bloodType = [HKObjectType characteristicTypeForIdentifier:HKCharacteristicTypeIdentifierBloodType];
     HKQuantityType *glucoseType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodGlucose];
-    return [NSSet setWithObjects:dietaryCalorieEnergyType, activeEnergyBurnType, heightType, weightType, birthdayType, biologicalSexType,glucoseType,nil];
+    return [NSSet setWithObjects:dietaryCalorieEnergyType, activeEnergyBurnType, heightType, weightType, birthdayType, biologicalSexType,glucoseType,bloodType,nil];
 }
 
 # pragma mark - Receiving Health Data
@@ -124,8 +128,9 @@
 -(void)updateLabelAge{
     NSError *error;
     NSDate *dateOfBirth = [self.healthStore dateOfBirthWithError:&error];
-    HKBloodTypeObject *bloodType = [self.healthStore bloodTypeWithError:&error];
-    NSLog(@"%@",[bloodType description]);
+    HKBloodTypeObject *bloodTypeObject = [self.healthStore bloodTypeWithError:&error];
+    NSLog(@"%@",[bloodTypeObject description]);
+    NSLog(@"%ld",(long)[bloodTypeObject bloodType]);
     
     if (!dateOfBirth) {
         NSLog(@"Either an error occured fetching the user's age information or none has been stored yet. In your app, try to handle this gracefully.");
@@ -147,7 +152,61 @@
     }
 }
 
-/*
+-(void)updateBloodTypeLabel{
+    NSError *error;
+    HKBloodTypeObject *bloodTypeObject = [self.healthStore bloodTypeWithError:&error];
+    if(!bloodTypeObject){
+        NSLog(@"Either an error occured fetching the user's blood group information or none has been stored yet.");
+        
+        self.lbl_bloodType.text = NSLocalizedString(@"Not available", nil);
+        NSLog(@"Error in retrieving blood type");
+    }
+    else{
+        NSString *bloodTypeString = [self getBloodTypeLiteral:bloodTypeObject];
+        self.lbl_bloodType.text = bloodTypeString;
+    }
+}
+
+#pragma mark - Additional HealthKit Metohds
+
+-(NSString *)getBloodTypeLiteral:(HKBloodTypeObject*)bloodTypeObject{
+    NSString *bloodTypeString;
+    long valueForEnum = [bloodTypeObject bloodType];
+    switch (valueForEnum) {
+        case 0:
+            bloodTypeString = @"NA";
+            break;
+        case 1:
+            bloodTypeString = @"A+";
+            break;
+        case 2:
+            bloodTypeString = @"A-";
+            break;
+        case 3:
+            bloodTypeString = @"B+";
+            break;
+        case 4:
+            bloodTypeString = @"B-";
+            break;
+        case 5:
+            bloodTypeString = @"AB+";
+            break;
+        case 6:
+            bloodTypeString = @"AB-";
+            break;
+        case 7:
+            bloodTypeString = @"A+";
+            break;
+        case 8:
+            bloodTypeString = @"A-";
+            break;
+        default:
+            break;
+    }
+    return bloodTypeString;
+}
+
+/*9
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
