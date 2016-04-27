@@ -24,7 +24,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-141" y="-958"/>
+            <point key="canvasLocation" x="-141" y="-1354"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="aMK-Pe-RoG">
@@ -48,7 +48,7 @@
                                                     <rect key="frame" x="15" y="12" width="28.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ERL-Zj-jpR">
@@ -72,7 +72,7 @@
                                                     <rect key="frame" x="15" y="12" width="48.5" height="19.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Kr7-ls-PCx">
@@ -96,7 +96,7 @@
                                                     <rect key="frame" x="15" y="12" width="49.5" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6LV-kM-TDG">
@@ -116,11 +116,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Blood Type" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PsW-sN-2DL">
-                                                    <rect key="frame" x="15" y="12" width="80.5" height="19"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Blood Group" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PsW-sN-2DL">
+                                                    <rect key="frame" x="15" y="12" width="92" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mPW-0P-W33">
@@ -145,11 +145,13 @@
                     <connections>
                         <outlet property="lbl_ageValue" destination="ERL-Zj-jpR" id="dup-lr-V9V"/>
                         <outlet property="lbl_bloodType" destination="mPW-0P-W33" id="eCQ-dc-7Y6"/>
+                        <outlet property="lbl_heightValue" destination="Kr7-ls-PCx" id="zWx-Mg-EW9"/>
+                        <outlet property="lbl_weightValue" destination="6LV-kM-TDG" id="BRJ-6j-QOL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWK-Mc-nsI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-614" y="661"/>
+            <point key="canvasLocation" x="-622" y="277"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="w8R-iC-mbi">
@@ -166,7 +168,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tb4-lT-kmb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-614" y="-127"/>
+            <point key="canvasLocation" x="-622" y="-507"/>
         </scene>
         <!--Glocse Level Records-->
         <scene sceneID="36N-1L-ucO">
@@ -195,7 +197,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TtX-6D-dCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-141" y="661"/>
+            <point key="canvasLocation" x="-141" y="277"/>
         </scene>
         <!--Records-->
         <scene sceneID="Urx-O2-G5B">
@@ -212,7 +214,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTS-I1-ZlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-141" y="-127"/>
+            <point key="canvasLocation" x="-141" y="-507"/>
         </scene>
         <!--Doctor Remarks-->
         <scene sceneID="gTD-ai-yKS">
@@ -241,7 +243,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b5Z-xs-Yyv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="661"/>
+            <point key="canvasLocation" x="340" y="277"/>
         </scene>
         <!--Remarks-->
         <scene sceneID="G9g-Vj-CPY">
@@ -258,7 +260,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Sk-4J-ZOB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="-127"/>
+            <point key="canvasLocation" x="340" y="-507"/>
         </scene>
     </scenes>
     <resources>

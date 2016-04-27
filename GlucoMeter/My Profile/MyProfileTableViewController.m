@@ -12,6 +12,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *lbl_ageValue;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_bloodType;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_heightValue;
+@property (weak, nonatomic) IBOutlet UILabel *lbl_weightValue;
 
 @end
 
@@ -37,8 +39,8 @@
                 // Update the user interface based on the current user's health information.
                 [self updateLabelAge];
                 [self updateBloodTypeLabel];
-                //[self updateUsersHeightLabel];
-                //[self updateUsersWeightLabel];
+                [self updateUsersHeightLabel];
+                [self updateUsersWeightLabel];
             });
         }];
     }
@@ -71,29 +73,6 @@
 */
 #pragma mark - HealthKit Setup
 
--(void)setUpHealthStoreObject {
-    NSLog(@"Setting up Health Store Object");
-    if ([HKHealthStore isHealthDataAvailable]) {
-        NSSet *writeDataTypes = [self dataTypesToWrite];
-        NSSet *readDataTypes = [self dataTypesToRead];
-        
-        [self.healthStore requestAuthorizationToShareTypes:writeDataTypes readTypes:readDataTypes completion:^(BOOL success, NSError *error) {
-            if (!success) {
-                NSLog(@"You didn't allow HealthKit to access these read/write data types. In your app, try to handle this error gracefully when a user decides not to provide access. The error was: %@. If you're using a simulator, try it on a device.", error);
-                
-                return;
-            }
-            [self updateLabelAge];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                // Update the user interface based on the current user's health information.
-                NSLog(@"Calling Update Age Method");
-                [self updateLabelAge];
-                //[self updateUsersHeightLabel];
-                //[self updateUsersWeightLabel];
-            });
-        }];
-    }
-}
 
 #pragma mark - HealthKit Permissions
 
@@ -165,6 +144,62 @@
         NSString *bloodTypeString = [self getBloodTypeLiteral:bloodTypeObject];
         self.lbl_bloodType.text = bloodTypeString;
     }
+}
+
+-(void)updateUsersHeightLabel
+{
+    // Query to get the user's latest height, if it exists.
+    HKQuantityType *heightType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierHeight];
+    
+    NSSortDescriptor *timeSortDescriptor = [[NSSortDescriptor alloc] initWithKey:HKSampleSortIdentifierEndDate ascending:NO];
+
+    HKSampleQuery *query = [[HKSampleQuery alloc] initWithSampleType:heightType predicate:nil limit:1 sortDescriptors:@[timeSortDescriptor]
+        resultsHandler:^(HKSampleQuery *query, NSArray *results, NSError *error) {
+        if(!results){
+            NSLog(@"%s","Error in updating height");
+        }
+        else{
+            HKUnit *heightUnit = [HKUnit inchUnit];
+            HKQuantitySample *quantitySample = results.firstObject;
+            HKQuantity *quantity = quantitySample.quantity;
+            double usersHeight = [quantity doubleValueForUnit:heightUnit];
+            NSLog(@"%f",usersHeight);
+            NSString *heightUnitString = @" Feet";
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *heightStringFormatted = [NSNumberFormatter localizedStringFromNumber:@(usersHeight) numberStyle:NSNumberFormatterNoStyle];
+                self.lbl_heightValue.text = [heightStringFormatted stringByAppendingString:heightUnitString];
+            });
+        }
+    }];
+    [self.healthStore executeQuery:query];
+}
+
+
+-(void)updateUsersWeightLabel
+{
+    HKQuantityType *weightType = [HKQuantityType quantityTypeForIdentifier:HKQuantityTypeIdentifierBodyMass];
+    NSSortDescriptor *timeSortDescriptor = [[NSSortDescriptor alloc] initWithKey:HKSampleSortIdentifierEndDate ascending:NO];
+
+    HKSampleQuery *query = [[HKSampleQuery alloc]initWithSampleType:weightType predicate:nil limit:1 sortDescriptors:@[timeSortDescriptor] resultsHandler:^(HKSampleQuery *query, NSArray *results, NSError *error) {
+        if (!results) {
+            NSLog(@"%s","Error in updating height");
+        } else {
+            HKUnit *bodyMassUnit = [HKUnit poundUnit];
+            HKQuantitySample *quantitySample = results.firstObject;
+            HKQuantity *quantity = quantitySample.quantity;
+            double userWeight = [quantity doubleValueForUnit:bodyMassUnit];
+            
+            NSLog(@"%f",userWeight);
+            NSString *weightUnitString = @" Pounds";
+            dispatch_async(dispatch_get_main_queue(), ^{
+                NSString *userWeightFormatted = [NSNumberFormatter localizedStringFromNumber:@(userWeight) numberStyle:NSNumberFormatterNoStyle];
+                self.lbl_weightValue.text = [userWeightFormatted stringByAppendingString:weightUnitString];
+            });
+            
+        }
+    }];
+    [self.healthStore executeQuery:query];
 }
 
 #pragma mark - Additional HealthKit Metohds
