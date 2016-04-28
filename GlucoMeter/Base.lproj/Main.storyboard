@@ -209,7 +209,15 @@
                             <outlet property="delegate" destination="eSg-IV-YXL" id="xnJ-p0-aL3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Blood Glucose Records" id="Sy6-FN-FY7"/>
+                    <navigationItem key="navigationItem" title="Records" id="Sy6-FN-FY7">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="5B0-07-rtk">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="FVJ-Pq-o58" kind="push" identifier="addRecordSugue" id="IeZ-qg-hEr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TtX-6D-dCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,6 +239,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WTS-I1-ZlV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-141" y="-507"/>
+        </scene>
+        <!--Add Record-->
+        <scene sceneID="aDy-dL-NhQ">
+            <objects>
+                <viewController id="FVJ-Pq-o58" customClass="AddRecords" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lvm-9O-MmF"/>
+                        <viewControllerLayoutGuide type="bottom" id="ffi-ip-UY2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dKu-r7-O16">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="md1-s8-Pvu">
+                                <rect key="frame" x="4" y="325" width="55" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date &amp; Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8r-Xb-AHn">
+                                <rect key="frame" x="4" y="72" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nuM-7c-FRn">
+                                <rect key="frame" x="154" y="325" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="md/dL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bco-aV-GeV">
+                                <rect key="frame" x="264" y="329" width="50" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIT-vy-ABA">
+                                <rect key="frame" x="120" y="373" width="81" height="30"/>
+                                <state key="normal" title="Add Record"/>
+                                <connections>
+                                    <action selector="addRecordIntoHealthStore:" destination="FVJ-Pq-o58" eventType="touchUpInside" id="IGK-Wh-nEY"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="6eU-lN-cKa">
+                                <rect key="frame" x="0.0" y="101" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="483554071.00251901">
+                                    <!--2016-04-28 16:34:31 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-31582800">
+                                    <!--2000-01-01 11:00:00 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="getValueFromDatePicker:" destination="FVJ-Pq-o58" eventType="valueChanged" id="qlB-5k-rjb"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add Record" id="WZk-Ea-YYe"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="button_addRecord" destination="ZIT-vy-ABA" id="OfB-b9-Bbs"/>
+                        <outlet property="datePicker" destination="6eU-lN-cKa" id="bTy-20-Va4"/>
+                        <outlet property="textField_record" destination="nuM-7c-FRn" id="tUs-jJ-j9q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DDW-od-zpZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-141" y="1010"/>
         </scene>
         <!--Doctor Remarks-->
         <scene sceneID="gTD-ai-yKS">

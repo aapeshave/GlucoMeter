@@ -8,6 +8,7 @@
 
 #import "MyRecordsTableViewController.h"
 #import "BloodGlucose.h"
+#import "AddRecords.h"
 
 @interface MyRecordsTableViewController ()
 
@@ -23,6 +24,8 @@
     self.bloodGlucoseArray = [NSMutableArray array];
     
     [self getBloodGlucoseLevels];
+    
+    //[self.tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -80,8 +83,8 @@
                 dateFormatter.dateStyle = NSDateFormatterMediumStyle;
                 dateFormatter.timeStyle = NSDateFormatterNoStyle;
                 dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
-                NSLog(@"%f",bloodGlucoseLevel);
-                NSLog(@"%@", [dateFormatter stringFromDate:someDate]);
+                //NSLog(@"%f",bloodGlucoseLevel);
+                //NSLog(@"%@", [dateFormatter stringFromDate:someDate]);
                 
                 BloodGlucose *instance =[[BloodGlucose alloc]initWithvalue:bloodGlucoseLevel andDate:someDate];
                 [self.bloodGlucoseArray addObject:instance];
@@ -157,14 +160,16 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"addRecordSugue"]) {
+        AddRecords *destViewController = segue.destinationViewController;
+        destViewController.healthStore = self.healthStore;
+     }
 }
-*/
+
 
 @end
