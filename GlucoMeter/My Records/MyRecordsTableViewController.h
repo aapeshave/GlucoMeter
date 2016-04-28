@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <HealthKit/HealthKit.h>
+#import "BloodGlucose.h"
 
 @interface MyRecordsTableViewController : UITableViewController
 @property (nonatomic) HKHealthStore *healthStore;
