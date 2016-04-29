@@ -44,7 +44,6 @@
     [self.healthStore saveObject:glucoseSample withCompletion:^(BOOL success, NSError * _Nullable error) {
         if(success){
             NSLog(@"Record Added Successfully");
-            [self.navigationController popViewControllerAnimated:YES];
         }
         else{
             NSLog(@"Error in adding object");

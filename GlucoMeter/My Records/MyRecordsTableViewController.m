@@ -23,7 +23,7 @@
     
     self.bloodGlucoseArray = [NSMutableArray array];
     
-    [self getBloodGlucoseLevels];
+    //[self getBloodGlucoseLevels];
     
     //[self.tableView reloadData];
     // Uncomment the following line to preserve selection between presentations.
@@ -36,6 +36,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [self getBloodGlucoseLevels];
 }
 
 #pragma mark - Table view data source
@@ -52,6 +56,7 @@
 #pragma mark - Get Blood Glucose Level 
 
 -(void)getBloodGlucoseLevels{
+    [self.bloodGlucoseArray removeAllObjects];
     NSSortDescriptor *timeSortDescriptor = [[NSSortDescriptor alloc] initWithKey:HKSampleSortIdentifierEndDate ascending:NO];
     
     HKQuantityType *glcoseType = [HKObjectType quantityTypeForIdentifier:HKQuantityTypeIdentifierBloodGlucose];

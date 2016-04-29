@@ -17,6 +17,10 @@
 		170CF4521CA724F500BC8611 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170CF4511CA724F500BC8611 /* HealthKit.framework */; };
 		170CF4561CA7267500BC8611 /* HealthKitManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 170CF4551CA7267500BC8611 /* HealthKitManager.m */; };
 		17604C481CD26AAE00ACCA4F /* AddRecords.m in Sources */ = {isa = PBXBuildFile; fileRef = 17604C471CD26AAE00ACCA4F /* AddRecords.m */; };
+		17604C4B1CD2D33600ACCA4F /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 17604C4A1CD2D33600ACCA4F /* User.m */; };
+		17604C501CD2D55C00ACCA4F /* Customised Cells in Resources */ = {isa = PBXBuildFile; fileRef = 17604C4F1CD2D55C00ACCA4F /* Customised Cells */; };
+		17604C5A1CD2E3D100ACCA4F /* AddUserController in Resources */ = {isa = PBXBuildFile; fileRef = 17604C591CD2E3D100ACCA4F /* AddUserController */; };
+		17604C601CD2E75B00ACCA4F /* AddUserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17604C5F1CD2E75B00ACCA4F /* AddUserController.m */; };
 		17CA43CC1CD1A50300B977BD /* BloodGlucose.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CA43CB1CD1A50300B977BD /* BloodGlucose.m */; };
 		17D795941CB20380004B2948 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17D795931CB20380004B2948 /* Images.xcassets */; };
 		17D795961CB20886004B2948 /* My Profile in Resources */ = {isa = PBXBuildFile; fileRef = 17D795951CB20886004B2948 /* My Profile */; };
@@ -65,6 +69,12 @@
 		170CF4551CA7267500BC8611 /* HealthKitManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HealthKitManager.m; sourceTree = "<group>"; };
 		17604C461CD26AAE00ACCA4F /* AddRecords.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddRecords.h; path = "My Records/AddRecords.h"; sourceTree = "<group>"; };
 		17604C471CD26AAE00ACCA4F /* AddRecords.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddRecords.m; path = "My Records/AddRecords.m"; sourceTree = "<group>"; };
+		17604C491CD2D33600ACCA4F /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = "GlucoMeter/My Profile/User.h"; sourceTree = "<group>"; };
+		17604C4A1CD2D33600ACCA4F /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = "GlucoMeter/My Profile/User.m"; sourceTree = "<group>"; };
+		17604C4F1CD2D55C00ACCA4F /* Customised Cells */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Customised Cells"; sourceTree = "<group>"; };
+		17604C591CD2E3D100ACCA4F /* AddUserController */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AddUserController; sourceTree = "<group>"; };
+		17604C5E1CD2E75B00ACCA4F /* AddUserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddUserController.h; path = GlucoMeter/AddUserController/AddUserController.h; sourceTree = "<group>"; };
+		17604C5F1CD2E75B00ACCA4F /* AddUserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddUserController.m; path = GlucoMeter/AddUserController/AddUserController.m; sourceTree = "<group>"; };
 		17CA43CA1CD1A50300B977BD /* BloodGlucose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BloodGlucose.h; path = GlucoMeter/Classes/BloodGlucose.h; sourceTree = "<group>"; };
 		17CA43CB1CD1A50300B977BD /* BloodGlucose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BloodGlucose.m; path = GlucoMeter/Classes/BloodGlucose.m; sourceTree = "<group>"; };
 		17D795931CB20380004B2948 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = GlucoMeter/Images.xcassets; sourceTree = "<group>"; };
@@ -108,6 +118,8 @@
 		170CF40F1CA724D100BC8611 = {
 			isa = PBXGroup;
 			children = (
+				17604C5E1CD2E75B00ACCA4F /* AddUserController.h */,
+				17604C5F1CD2E75B00ACCA4F /* AddUserController.m */,
 				17CA43CD1CD1A50B00B977BD /* Classes */,
 				17D795931CB20380004B2948 /* Images.xcassets */,
 				170CF4511CA724F500BC8611 /* HealthKit.framework */,
@@ -138,6 +150,8 @@
 				170CF41E1CA724D100BC8611 /* AppDelegate.h */,
 				170CF41F1CA724D100BC8611 /* AppDelegate.m */,
 				170CF4271CA724D100BC8611 /* Main.storyboard */,
+				17604C591CD2E3D100ACCA4F /* AddUserController */,
+				17604C4F1CD2D55C00ACCA4F /* Customised Cells */,
 				17604C421CD2629C00ACCA4F /* Add Records */,
 				170CF4541CA7267500BC8611 /* HealthKitManager.h */,
 				170CF4551CA7267500BC8611 /* HealthKitManager.m */,
@@ -195,6 +209,8 @@
 			children = (
 				17CA43CA1CD1A50300B977BD /* BloodGlucose.h */,
 				17CA43CB1CD1A50300B977BD /* BloodGlucose.m */,
+				17604C491CD2D33600ACCA4F /* User.h */,
+				17604C4A1CD2D33600ACCA4F /* User.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -310,9 +326,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17604C5A1CD2E3D100ACCA4F /* AddUserController in Resources */,
 				170CF42E1CA724D100BC8611 /* LaunchScreen.storyboard in Resources */,
 				17D795941CB20380004B2948 /* Images.xcassets in Resources */,
 				17D795961CB20886004B2948 /* My Profile in Resources */,
+				17604C501CD2D55C00ACCA4F /* Customised Cells in Resources */,
 				170CF42B1CA724D100BC8611 /* Assets.xcassets in Resources */,
 				17D795A11CB20A0F004B2948 /* My Records in Resources */,
 				170CF4291CA724D100BC8611 /* Main.storyboard in Resources */,
@@ -343,11 +361,13 @@
 			files = (
 				170CF4561CA7267500BC8611 /* HealthKitManager.m in Sources */,
 				170CF4201CA724D100BC8611 /* AppDelegate.m in Sources */,
+				17604C4B1CD2D33600ACCA4F /* User.m in Sources */,
 				17604C481CD26AAE00ACCA4F /* AddRecords.m in Sources */,
 				170CF41D1CA724D100BC8611 /* main.m in Sources */,
 				17D795A91CB20A64004B2948 /* MyRemarksTableViewController.m in Sources */,
 				17D795A61CB20A44004B2948 /* MyRecordsTableViewController.m in Sources */,
 				17D7959F1CB20971004B2948 /* MyProfileTableViewController.m in Sources */,
+				17604C601CD2E75B00ACCA4F /* AddUserController.m in Sources */,
 				17CA43CC1CD1A50300B977BD /* BloodGlucose.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
