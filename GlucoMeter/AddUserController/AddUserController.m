@@ -9,6 +9,12 @@
 #import "AddUserController.h"
 
 @interface AddUserController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField_firstName;
+@property (weak, nonatomic) IBOutlet UITextField *textField_lastName;
+@property (weak, nonatomic) IBOutlet UITextField *textField_userName;
+@property (weak, nonatomic) IBOutlet UITextField *textField_password;
+@property (weak, nonatomic) IBOutlet UIButton *btn_createUser;
+@property (weak, nonatomic) IBOutlet UITextField *textField_email;
 
 @end
 
@@ -96,5 +102,38 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(BOOL)textFieldShouldReturn:(UITextField*)textField
+{
+    NSInteger nextTag = textField.tag + 1;
+    // Try to find next responder
+    UIResponder* nextResponder = [textField.superview viewWithTag:nextTag];
+    if (nextResponder) {
+        // Found next responder, so set it.
+        [nextResponder becomeFirstResponder];
+    } else {
+        // Not found, so remove keyboard.
+        [textField resignFirstResponder];
+    }
+    return NO; // We do not want UITextField to insert line-breaks.
+}
+- (IBAction)addUser:(id)sender {
+    NSString *firstName = _textField_firstName.text;
+    NSString *lastName = _textField_lastName.text;
+    NSString *email = _textField_email.text;
+    NSString *username = _textField_userName.text;
+    NSString *password = _textField_password.text;
+    
+    if(0 != [firstName length] && 0 != [lastName length] && 0 != [email length] &&
+       0 != [username length] && 0 != [password length]){
+        
+    }
+    else{
+        NSLog(@"Please fill all fields");
+    }
+    
+}
+
+
 
 @end
