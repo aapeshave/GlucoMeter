@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <HealthKit/HealthKit.h>
+#import "User.h"
 
 @interface MyRemarksTableViewController : UITableViewController
 @property (nonatomic) HKHealthStore *healthStore;
-
+@property (nonatomic,retain) User *iPhoneUser;
+@property (weak) NSDate *birthDate;
+@property (weak) NSString *bloodGroup;
 @end

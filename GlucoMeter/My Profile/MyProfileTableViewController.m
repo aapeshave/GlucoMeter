@@ -7,6 +7,7 @@
 //
 
 #import "MyProfileTableViewController.h"
+#import "MyRemarksTableViewController.h"
 
 @interface MyProfileTableViewController ()
 
@@ -15,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *lbl_heightValue;
 @property (weak, nonatomic) IBOutlet UILabel *lbl_weightValue;
 
+
+@property (weak,nonatomic) NSDate *birthDate;
+@property (weak,nonatomic) NSString *bloodGroup;
 @end
 
 @implementation MyProfileTableViewController
@@ -111,6 +115,8 @@
     NSLog(@"%@",[bloodTypeObject description]);
     NSLog(@"%ld",(long)[bloodTypeObject bloodType]);
     
+    
+    
     if (!dateOfBirth) {
         NSLog(@"Either an error occured fetching the user's age information or none has been stored yet. In your app, try to handle this gracefully.");
         
@@ -128,6 +134,8 @@
         NSString *ageValue = [NSNumberFormatter localizedStringFromNumber:@(usersAge) numberStyle:NSNumberFormatterNoStyle];
         NSString *ageUnit = @" Years";
         self.lbl_ageValue.text = [ageValue stringByAppendingString:ageUnit];
+    
+        
     }
 }
 
@@ -190,7 +198,7 @@
             HKQuantity *quantity = quantitySample.quantity;
             double userWeight = [quantity doubleValueForUnit:bodyMassUnit];
             
-            NSLog(@"%f",userWeight);
+            //NSLog(@"%f",userWeight);
             NSString *weightUnitString = @" Pounds";
             dispatch_async(dispatch_get_main_queue(), ^{
                 NSString *userWeightFormatted = [NSNumberFormatter localizedStringFromNumber:@(userWeight) numberStyle:NSNumberFormatterNoStyle];

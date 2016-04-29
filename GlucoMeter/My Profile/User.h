@@ -16,7 +16,11 @@
 @property (nonatomic) NSString *userName;
 @property (nonatomic) NSString *password;
 @property (nonatomic) NSDate *birthDate;
+@property (nonatomic) NSString *email;
 @property (nonatomic) NSString *bloodGroup;
+@property (nonatomic) NSString *assignedDoctorUsername;
 
-
+-(id)initWithFirstName:(NSString *)firstName andLastName:(NSString *)lastName andEmail:(NSString *)email
+           andUsername:(NSString *)username andPassword:(NSString *)password
+          andBirthDate:(NSDate *)date andBloodGroup:(NSString *)bloodGrouop andAssignedDoctorUsername:(NSString *)doctorUserName;
 @end

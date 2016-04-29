@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface AddUserController : UITableViewController
+@property(nonatomic,retain) User *currentUser;
 
+-(void)createAlertWithMessage:(NSString *)message;
 @end
