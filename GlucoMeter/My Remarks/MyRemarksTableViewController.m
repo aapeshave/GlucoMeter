@@ -143,6 +143,19 @@
             if(data){
                 NSLog(@"%@", [NSJSONSerialization JSONObjectWithData:data options:0 error:nil]);
             }
+            else{
+                //NSLog(@"Can not reach our servers");
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"We can not reach to  GlucoMeter Servers.Please check your connection." preferredStyle:UIAlertControllerStyleAlert];
+                    
+                    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                        //NSLog(@"You pressed button OK");
+                    }];
+                    
+                    [alert addAction:okAction];
+                    [self presentViewController:alert animated:YES completion:nil];
+                });
+            }
         }]resume];
         
         //NSData *responseData = [NSURLSession dataT]
