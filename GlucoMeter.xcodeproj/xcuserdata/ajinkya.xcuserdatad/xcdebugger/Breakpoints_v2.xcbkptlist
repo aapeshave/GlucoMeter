@@ -490,7 +490,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GlucoMeter/My Remarks/MyRemarksTableViewController.m"
-            timestampString = "483656109.077113"
+            timestampString = "483674616.136521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "259"
@@ -506,7 +506,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GlucoMeter/My Remarks/MyRemarksTableViewController.m"
-            timestampString = "483656109.077113"
+            timestampString = "483674616.136521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "257"
@@ -522,7 +522,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GlucoMeter/My Remarks/MyRemarksTableViewController.m"
-            timestampString = "483656109.077113"
+            timestampString = "483674616.136521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "291"
@@ -534,16 +534,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GlucoMeter/My Remarks/MyRemarksTableViewController.m"
-            timestampString = "483656109.077113"
+            filePath = "GlucoMeter/My Remarks/RemarksTableViewController.m"
+            timestampString = "483673362.08394"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
-            landmarkName = "-checkWithServerAboutLoginWithUsername:andPassword:"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-getRemarksFromServerByUsername:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GlucoMeter/My Remarks/RemarksTableViewController.m"
+            timestampString = "483665494.124286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-getRemarksFromServerByUsername:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GlucoMeter/My Remarks/RemarksTableViewController.m"
+            timestampString = "483665494.124286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "-getRemarksFromServerByUsername:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -553,61 +585,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GlucoMeter/My Remarks/MyRemarksTableViewController.m"
-            timestampString = "483656109.077113"
+            filePath = "GlucoMeter/My Remarks/RemarksTableViewController.m"
+            timestampString = "483673362.08394"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "280"
-            endingLineNumber = "280"
-            landmarkName = "-checkWithServerAboutLoginWithUsername:andPassword:"
-            landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__82-[MyRemarksTableViewController checkWithServerAboutLoginWithUsername:andPassword:]_block_invoke"
-                  moduleName = "GlucoMeter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ajinkya/Documents/Study/Smartphones/Healthkit/GlucoMeter/GlucoMeter/My%20Remarks/MyRemarksTableViewController.m"
-                  timestampString = "483654712.033068"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "272"
-                  endingLineNumber = "272"
-                  offsetFromSymbolStart = "1012">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__82-[MyRemarksTableViewController checkWithServerAboutLoginWithUsername:andPassword:]_block_invoke.177"
-                  moduleName = "GlucoMeter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ajinkya/Documents/Study/Smartphones/Healthkit/GlucoMeter/GlucoMeter/My%20Remarks/MyRemarksTableViewController.m"
-                  timestampString = "483654712.033225"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "272"
-                  endingLineNumber = "272"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GlucoMeter/My Remarks/MyRemarksTableViewController.m"
-            timestampString = "483656109.077113"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
-            landmarkName = "-checkWithServerAboutLoginWithUsername:andPassword:"
+            startingLineNumber = "94"
+            endingLineNumber = "94"
+            landmarkName = "-tableView:cellForRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -617,13 +601,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GlucoMeter/My Remarks/MyRemarksTableViewController.m"
-            timestampString = "483656109.077113"
+            filePath = "GlucoMeter/My Remarks/RemarksTableViewController.m"
+            timestampString = "483665367.610872"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
-            landmarkName = "-checkWithServerAboutLoginWithUsername:andPassword:"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -633,61 +617,110 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GlucoMeter/My Remarks/MyRemarksTableViewController.m"
-            timestampString = "483656109.077113"
+            filePath = "GlucoMeter/My Remarks/RemarksTableViewController.m"
+            timestampString = "483665494.124286"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
-            landmarkName = "-checkWithServerAboutLoginWithUsername:andPassword:"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "-viewDidLoad"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__82-[MyRemarksTableViewController checkWithServerAboutLoginWithUsername:andPassword:]_block_invoke_2"
-                  moduleName = "GlucoMeter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ajinkya/Documents/Study/Smartphones/Healthkit/GlucoMeter/GlucoMeter/My%20Remarks/MyRemarksTableViewController.m"
-                  timestampString = "483654712.03539"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "269"
-                  endingLineNumber = "269"
-                  offsetFromSymbolStart = "257">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__copy_helper_block_.174"
-                  moduleName = "GlucoMeter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ajinkya/Documents/Study/Smartphones/Healthkit/GlucoMeter/GlucoMeter/My%20Remarks/MyRemarksTableViewController.m"
-                  timestampString = "483654712.035529"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "269"
-                  endingLineNumber = "269"
-                  offsetFromSymbolStart = "51">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_.175"
-                  moduleName = "GlucoMeter"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ajinkya/Documents/Study/Smartphones/Healthkit/GlucoMeter/GlucoMeter/My%20Remarks/MyRemarksTableViewController.m"
-                  timestampString = "483654712.035637"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "269"
-                  endingLineNumber = "269"
-                  offsetFromSymbolStart = "29">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GlucoMeter/My Remarks/RemarksTableViewController.m"
+            timestampString = "483673362.08394"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-getRemarksFromServerByUsername:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GlucoMeter/My Remarks/RemarksTableViewController.m"
+            timestampString = "483665598.895485"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-numberOfSectionsInTableView:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GlucoMeter/My Remarks/RemarksTableViewController.m"
+            timestampString = "483665599.736269"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-tableView:numberOfRowsInSection:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GlucoMeter/My Remarks/SampleRemarks.m"
+            timestampString = "483667773.229028"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "-getRemarksFromServerByUsername:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GlucoMeter/My Remarks/SampleRemarks.m"
+            timestampString = "483667773.229028"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
+            landmarkName = "-getRemarksFromServerByUsername:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GlucoMeter/My Remarks/SampleRemarks.m"
+            timestampString = "483673227.840484"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-viewDidLoad"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

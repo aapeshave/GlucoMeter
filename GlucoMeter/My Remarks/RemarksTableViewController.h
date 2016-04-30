@@ -11,4 +11,6 @@
 @interface RemarksTableViewController : UITableViewController
 @property (strong) NSString *username;
 @property (strong) NSString *doctorUsername;
+@property Boolean networkFlag;
+@property (strong,readwrite) NSMutableArray *objects;
 @end

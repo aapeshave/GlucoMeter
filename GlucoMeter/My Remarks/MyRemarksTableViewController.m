@@ -12,9 +12,8 @@
 #import <netinet/in.h> 
 #import <arpa/inet.h> 
 #import <netdb.h>
-#import "AddUserController.h"
 #import "RemarksTableViewController.h"
-
+#import "AddUserController.h"
 
 @interface MyRemarksTableViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *button_createAccount;
@@ -304,6 +303,8 @@
     if ([segue.identifier isEqualToString:@"createUserSegue"]) {
         AddUserController *destination = segue.destinationViewController;
         destination.currentUser = iPhoneUser;
+        //AddUserContoller *destination = segue.destinationViewController;
+        //destination.currentUser = iPhoneUser;
     }
     if ([segue.identifier isEqualToString:@"viewRemarksSegue"]) {
         RemarksTableViewController *destination = segue.destinationViewController;

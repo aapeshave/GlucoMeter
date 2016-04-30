@@ -1,33 +1,21 @@
 //
-//  RemarksTableViewController.m
+//  DoctorViewController.m
 //  GlucoMeter
 //
 //  Created by Ajinkya Peshave on 4/29/16.
 //  Copyright © 2016 Ajinkya Peshave. All rights reserved.
 //
 
-#import "RemarksTableViewController.h"
+#import "DoctorViewController.h"
 
-@interface RemarksTableViewController ()
+@interface DoctorViewController ()
 
-@property int noData;
 @end
 
-@implementation RemarksTableViewController
-@synthesize username,doctorUsername,objects;
+@implementation DoctorViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"%@",username);
-    NSLog(@"%@",doctorUsername);
-    
-    _noData=1;
-    
-        [self getRemarksFromServerByUsername:username];
-        [self.tableView reloadData];
-    
-    //[self.tableView reloadData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -41,68 +29,27 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewWillAppear:(BOOL)animated{
-   [self.tableView reloadData];
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return objects.count;
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
-
-#pragma mark - get Remarks From Server
-
--(void) getRemarksFromServerByUsername:(NSString *)patientUusername {
-    NSURL *url = [NSURL URLWithString:@"http://localhost:8080/ios/getRemarkList.htm"];
-    NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:config];
-    
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
-    request.HTTPMethod = @"POST";
-    
-    NSString* requestData = [NSString stringWithFormat:@"username=%@",patientUusername];
-    
-    NSData *data = [requestData dataUsingEncoding:NSUTF8StringEncoding];
-    
-    NSError *error = nil;
-    [request setHTTPBody:data];
-    
-    if(!error){
-        NSURLSessionUploadTask *task = [session uploadTaskWithRequest:request fromData:data completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            objects =  [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-            [self.tableView reloadData];
-        } ];
-        [self.tableView reloadData];
-        [task resume];
-    }
-}
-
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"myCell"];
-    }
+    // Configure the cell...
     
-    if(_noData==1){
-        cell.textLabel.text = @"No Remarks From Doctor";
-    }
-    else{
-        NSDictionary *info = [objects objectAtIndex:indexPath.row];
-        cell.autoresizesSubviews = true;
-        cell.textLabel.text = [info objectForKey:@"remarkTitle"];
-        cell.detailTextLabel.text = [info objectForKey:@"doctorUsername"];
-    }
     return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
