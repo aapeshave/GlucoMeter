@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Remark.h"
 
 @interface RemarkViewController : UIViewController
-
+@property (strong,retain) Remark *detailedRemark;
 @end

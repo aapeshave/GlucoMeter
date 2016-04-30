@@ -91,7 +91,12 @@
                 //NSLog(@"%f",bloodGlucoseLevel);
                 //NSLog(@"%@", [dateFormatter stringFromDate:someDate]);
                 
-                BloodGlucose *instance =[[BloodGlucose alloc]initWithvalue:bloodGlucoseLevel andDate:someDate];
+                 NSString *heightUnitString = @" mg/dl";
+                NSString *heightStringFormatted = [NSNumberFormatter localizedStringFromNumber:@(bloodGlucoseLevel) numberStyle:NSNumberFormatterNoStyle];
+                NSString *bloodGlucoseString = [heightStringFormatted stringByAppendingString:heightUnitString];
+
+                
+                BloodGlucose *instance =[[BloodGlucose alloc]initWithvalue:bloodGlucoseString andDate:someDate];
                 [self.bloodGlucoseArray addObject:instance];
                 //NSLog(@"%@",someDate);
                 [self.tableView reloadData];
@@ -123,9 +128,9 @@
         dateFormatter.timeStyle = NSDateFormatterNoStyle;
         dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
         NSString *stringDate = [dateFormatter stringFromDate:instance.date];
-        NSString *stringValue = [NSString stringWithFormat:@"%f",instance.value];
+        //NSString *stringValue = [NSString stringWithFormat:@"%f",instance.value];
         cell.detailTextLabel.text = stringDate;
-        cell.textLabel.text = stringValue;
+        cell.textLabel.text = [instance value];
     }
     return cell;
 }

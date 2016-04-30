@@ -11,9 +11,9 @@
 
 @interface BloodGlucose : NSObject
 
-@property(nonatomic) double value;
+@property(nonatomic) NSString  *value;
 @property(nonatomic) NSDate *date;
 
--(id)initWithvalue:(double)value andDate:(NSDate *)date;
+-(id)initWithvalue:(NSString *)value andDate:(NSDate *)date;
 
 @end

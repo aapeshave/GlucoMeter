@@ -14,11 +14,11 @@
 - (NSString *)description {
     return [@{
               @"date": self.date,
-              @"value": @(self.value)
+              @"value": self.value
               } description];
 }
 
--(id)initWithvalue:(double)value andDate:(NSDate *)date{
+-(id)initWithvalue:(NSString *)value andDate:(NSDate *)date{
     self = [super init];
     if (self) {
         _date = date;

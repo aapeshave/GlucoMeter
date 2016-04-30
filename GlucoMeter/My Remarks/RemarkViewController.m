@@ -9,13 +9,19 @@
 #import "RemarkViewController.h"
 
 @interface RemarkViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *lbl_title;
+@property (weak, nonatomic) IBOutlet UITextView *textViewDetail;
 
 @end
 
 @implementation RemarkViewController
+@synthesize detailedRemark;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //NSLog(@"%@",[detailedRemark remarkTitle]);
+    _lbl_title.text = [detailedRemark remarkTitle];
+    _textViewDetail.text = [detailedRemark remarkString];
     // Do any additional setup after loading the view.
 }
 

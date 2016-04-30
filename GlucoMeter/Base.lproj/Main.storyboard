@@ -728,6 +728,10 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="PCR-lm-L8c" kind="push" trigger="accessoryAction" id="jQm-kD-mRh"/>
+                                    <segue destination="8Ed-dt-0hT" kind="push" identifier="detailedRemarkSegue" id="ntE-os-R6K"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -751,7 +755,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="W8B-xM-aph">
-                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W8B-xM-aph" id="lRa-fO-LpD">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -781,13 +785,60 @@
                     <view key="view" contentMode="scaleToFill" id="pLM-We-tMJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVV-bj-xG3">
+                                <rect key="frame" x="10" y="72" width="38" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="6sX-Vc-mdV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcc-SH-oIS">
+                                <rect key="frame" x="71" y="72" width="229" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKd-fA-FqN">
+                                <rect key="frame" x="8" y="114" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zl5-EF-HL9">
+                                <rect key="frame" x="65" y="114" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FVV-bj-xG3" firstAttribute="leading" secondItem="pLM-We-tMJ" secondAttribute="leadingMargin" constant="-6" id="3vu-ce-LgN"/>
+                            <constraint firstItem="FVV-bj-xG3" firstAttribute="baseline" secondItem="xcc-SH-oIS" secondAttribute="baseline" id="5Vs-Vw-AUj"/>
+                            <constraint firstItem="FVV-bj-xG3" firstAttribute="top" secondItem="Pcx-We-HdW" secondAttribute="bottom" constant="8" symbolic="YES" id="6bf-wX-6dx"/>
+                            <constraint firstItem="zl5-EF-HL9" firstAttribute="leading" secondItem="RKd-fA-FqN" secondAttribute="trailing" constant="8" symbolic="YES" id="I5L-w8-ep6"/>
+                            <constraint firstItem="xcc-SH-oIS" firstAttribute="leading" secondItem="FVV-bj-xG3" secondAttribute="trailing" constant="23" id="IbI-xi-K9x"/>
+                            <constraint firstItem="zl5-EF-HL9" firstAttribute="top" secondItem="RKd-fA-FqN" secondAttribute="top" id="TXM-CB-AvM"/>
+                            <constraint firstItem="RKd-fA-FqN" firstAttribute="top" secondItem="FVV-bj-xG3" secondAttribute="bottom" constant="21" id="UyD-k8-z2W"/>
+                            <constraint firstItem="zl5-EF-HL9" firstAttribute="centerX" secondItem="xcc-SH-oIS" secondAttribute="centerX" id="bDZ-8w-6Bg"/>
+                            <constraint firstItem="FVV-bj-xG3" firstAttribute="leading" secondItem="RKd-fA-FqN" secondAttribute="leading" constant="2" id="lRe-cE-s8v"/>
+                            <constraint firstItem="iOF-Br-e0u" firstAttribute="top" secondItem="zl5-EF-HL9" secondAttribute="bottom" constant="277" id="pTy-ZL-NPg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xcc-SH-oIS" secondAttribute="trailing" constant="4" id="swh-es-E66"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Remark Information" id="uc7-Qu-cUj"/>
+                    <connections>
+                        <outlet property="lbl_title" destination="xcc-SH-oIS" id="8r9-Ad-l0Z"/>
+                        <outlet property="textViewDetail" destination="zl5-EF-HL9" id="kxn-Qd-C6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pwd-EH-CmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="842" y="1360"/>
+            <point key="canvasLocation" x="842" y="1283"/>
         </scene>
         <!--Remarks-->
         <scene sceneID="G9g-Vj-CPY">

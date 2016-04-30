@@ -33,7 +33,16 @@
         
         [self.healthStore requestAuthorizationToShareTypes:writeDataTypes readTypes:readDataTypes completion:^(BOOL success, NSError *error) {
             if (!success) {
-                NSLog(@"You didn't allow HealthKit to access these read/write data types. In your app, try to handle this error gracefully when a user decides not to provide access. The error was: %@. If you're using a simulator, try it on a device.", error);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"healthKit Warning" message:@"You havn't allowed HealthKit to Access Your Health Data" preferredStyle:UIAlertControllerStyleAlert];
+                    
+                    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                        //NSLog(@"You pressed button OK");
+                    }];
+                    
+                    [alert addAction:okAction];
+                    [self presentViewController:alert animated:YES completion:nil];
+                });
                 
                 return;
             }
@@ -118,7 +127,16 @@
     
     
     if (!dateOfBirth) {
-        NSLog(@"Either an error occured fetching the user's age information or none has been stored yet. In your app, try to handle this gracefully.");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Warning" message:@"Please Update you Health Profile" preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                    //NSLog(@"You pressed button OK");
+                }];
+                
+                [alert addAction:okAction];
+                [self presentViewController:alert animated:YES completion:nil];
+            });
         
         self.lbl_ageValue.text = NSLocalizedString(@"Not available", nil);
         NSLog(@"Error in retrieving birthdate");

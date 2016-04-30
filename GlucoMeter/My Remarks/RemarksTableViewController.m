@@ -7,6 +7,8 @@
 //
 
 #import "RemarksTableViewController.h"
+#import "RemarkViewController.h"
+#import "Remark.h"
 
 @interface RemarksTableViewController ()
 
@@ -55,6 +57,26 @@
     return objects.count;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"myCell"];
+    }
+    
+    if(objects.count==0){
+        cell.textLabel.text = @"Empty";
+        cell.detailTextLabel.text =@"No Data";
+    }
+    else{
+        NSDictionary *info = [objects objectAtIndex:indexPath.row];
+        cell.autoresizesSubviews = true;
+        cell.textLabel.text = [info objectForKey:@"remarkTitle"];
+        cell.detailTextLabel.text = [info objectForKey:@"doctorUsername"];
+    }
+    return cell;
+}
+
 
 #pragma mark - get Remarks From Server
 
@@ -82,27 +104,6 @@
         [task resume];
     }
 }
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"myCell" forIndexPath:indexPath];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"myCell"];
-    }
-    
-    if(_noData==1){
-        cell.textLabel.text = @"No Remarks From Doctor";
-    }
-    else{
-        NSDictionary *info = [objects objectAtIndex:indexPath.row];
-        cell.autoresizesSubviews = true;
-        cell.textLabel.text = [info objectForKey:@"remarkTitle"];
-        cell.detailTextLabel.text = [info objectForKey:@"doctorUsername"];
-    }
-    return cell;
-}
-
 
 /*
 // Override to support conditional editing of the table view.
@@ -138,14 +139,25 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"detailedRemarkSegue"]) {
+        RemarkViewController *destination = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        NSDictionary *object = objects[indexPath.row];
+        Remark *someRemark = [[Remark alloc]init];
+        someRemark.remarkTitle = [object objectForKey:@"remarkTitle"];
+        someRemark.remarkString = [object objectForKey:@"remarkString"];
+        someRemark.doctorUsername = [object objectForKey:@"doctorUsername"];
+        someRemark.additionalCommentsFromUser = [object objectForKey:@"additionalCommentsFromUser"];
+        destination.detailedRemark = someRemark;
+        //AddUserContoller *destination = segue.destinationViewController;
+        //destination.currentUser = iPhoneUser;
+    }
 }
-*/
+
 
 @end
