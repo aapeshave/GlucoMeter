@@ -43,10 +43,29 @@
     
     [self.healthStore saveObject:glucoseSample withCompletion:^(BOOL success, NSError * _Nullable error) {
         if(success){
-            NSLog(@"Record Added Successfully");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Success" message:@"Record Added Successfully" preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                    //NSLog(@"You pressed button OK");
+                }];
+                
+                [alert addAction:okAction];
+                [self presentViewController:alert animated:YES completion:nil];
+            });
         }
         else{
-            NSLog(@"Error in adding object");
+            //NSLog(@"Error in adding object");
+            dispatch_async(dispatch_get_main_queue(), ^{
+                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error" message:@"We can not add your data. Please check healthKit permissions." preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+                    //NSLog(@"You pressed button OK");
+                }];
+                
+                [alert addAction:okAction];
+                [self presentViewController:alert animated:YES completion:nil];
+            });
         }
     }];
 }
