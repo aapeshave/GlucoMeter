@@ -140,7 +140,9 @@
         
         NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
         [[session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            NSLog(@"%@", [NSJSONSerialization JSONObjectWithData:data options:0 error:nil]);
+            if(data){
+                NSLog(@"%@", [NSJSONSerialization JSONObjectWithData:data options:0 error:nil]);
+            }
         }]resume];
         
         //NSData *responseData = [NSURLSession dataT]
