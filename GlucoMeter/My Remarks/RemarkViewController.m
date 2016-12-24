@@ -11,6 +11,8 @@
 @interface RemarkViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *lbl_title;
 @property (weak, nonatomic) IBOutlet UITextView *textViewDetail;
+@property (weak, nonatomic) IBOutlet UITextField *textField_additionalComments;
+@property (weak, nonatomic) IBOutlet UIButton *button_saveComment;
 
 @end
 
@@ -22,12 +24,22 @@
     //NSLog(@"%@",[detailedRemark remarkTitle]);
     _lbl_title.text = [detailedRemark remarkTitle];
     _textViewDetail.text = [detailedRemark remarkString];
+    self.textField_additionalComments.delegate = self;
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - textField Method
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
+- (IBAction)saveAdditionalComment:(id)sender {
 }
 
 /*
